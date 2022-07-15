@@ -6,8 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/sol', function(req, res, next) {
-  res.send('Estamos no verão!');
+// GET home page.
+router.get('/', function(req, res) {
+  res.redirect('/catalog');
 });
 
 module.exports = router;
